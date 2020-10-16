@@ -1,6 +1,7 @@
 @import 'partials/reset';
 @import 'partials/prefix-mixins';
 @import 'partials/layout'; // responsive grid and media queries
+@import url('https://fonts.googleapis.com/css2?family=Nunito&family=Mountains+of+Christmas&display=swap');
 
 // color palette - these colors will be the color swatches of the Colors section
 
@@ -16,8 +17,8 @@ $success: $color-4; // green
 $alert: $color-3; // red
 
 // fonts
-$primary-font: 'Merriweather', serif;
-$secondary-font: 'Open Sans', sans-serif;
+$primary-font: 'Nunito', serif;
+$secondary-font: 'Mountains of Christmas', sans-serif;
 
 /* -------------------------------- 
 

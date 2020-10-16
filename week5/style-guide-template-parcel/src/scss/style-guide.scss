@@ -3,22 +3,14 @@
 @import 'partials/layout'; // responsive grid and media queries
 @import url('https://fonts.googleapis.com/css2?family=Nunito&family=Mountains+of+Christmas&display=swap');
 
-// color palette - these colors will be the color swatches of the Colors section
-
-$color-1: #9c008f; // Cornflower Blue - Action color
-$color-2: #960020; // Dark Blue
-$color-3: #2de0ad; // Red
-$color-4: #f72c25; // light grey
-$color-5: #ffffff; // white
-
-// additional colors
-
-$success: $color-4; // green
-$alert: $color-3; // red
 
 // fonts
 $primary-font: 'Nunito', serif;
 $secondary-font: 'Mountains of Christmas', sans-serif;
+
+@import 'partials/colors';
+
+@import 'partials/branding';
 
 /* -------------------------------- 
 
@@ -57,3 +49,5 @@ xPatterns
 @import 'partials/form';
 
 @import 'partials/basic-style';
+
+@import 'partials/elements';

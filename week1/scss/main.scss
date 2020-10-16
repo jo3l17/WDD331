@@ -1,0 +1,7 @@
+@import url('https://fonts.googleapis.com/css2?family=Lora&display=swap');
+@import 'variables';
+@import 'mixins';
+@import 'small';
+@media only screen and (min-width: 768px) {
+@import 'large';
+}

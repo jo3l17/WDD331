@@ -1,0 +1,32 @@
+
+/* fieldset[title=fieldset2] > p + p{
+    background-color: red;
+} */
+fieldset:nth-of-type(2) >p + p{
+    background-color: red;
+}
+
+/* The second <p> of the second <fieldset> could be selected by either of these selectors below. Explain why the first would be a better option than the second.
+fieldset[title=fieldset2] > p + p
+fieldset:nth-of-type(2) >p + p */
+/* The first first selector is better because is
+specifying an attribute of the second fieldset, and
+if that fieldset changes its position, the selector will
+select the same fielset */
+/* Explain the difference the space makes with the following two selectors: "span.help" and "span .help". How does it change what will be selected? */
+/* the main difference between "span.help" and "span .help" is that the selection
+is different because the first select all the span elements with the class help
+and the second select the elements that are inside a span with the class help,
+so they are completely different*/
+
+/* write the CSS that would surround the help text (class=“help”) with parenthesis. */
+.help:before{
+    content: '(';
+}
+.help:after{
+    content: ')';
+}
+/* Write a CSS rule that will hide any paragraphs in a fieldset after the 2nd. */
+p:nth-of-type(n+3){
+    display: none;
+}

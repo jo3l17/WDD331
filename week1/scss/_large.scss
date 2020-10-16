@@ -1,0 +1,21 @@
+body>div{
+    @include flex-container;
+}
+header{
+    width: 500px;
+}
+main{
+    background-color: $clear;
+    padding: 60px;
+    article{
+        padding: 50px;
+        .post-content{
+            figure{
+                text-align: center;
+                img{
+                    max-width: 250px;
+                }
+            }
+        }
+    }
+}

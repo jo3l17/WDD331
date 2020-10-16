@@ -1,0 +1,14 @@
+@mixin flex-container($direction:row) {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-flex-direction: $direction;
+    -ms-flex-direction: $direction;
+    flex-direction: $direction;
+}
+@mixin box-shadow($color, $top, $left, $blur) {
+    -webkit-box-shadow: $color $top $left $blur;
+    -moz-box-shadow: $color $top $left $blur;
+    box-shadow: $color $top $left $blur;
+}

@@ -1,0 +1,87 @@
+@import url("https://fonts.googleapis.com/css2?family=Lora&display=swap");
+body {
+  margin: 0;
+  font-family: Helvetica, Arial, sans-serif; }
+
+a {
+  text-decoration: none; }
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: "Lora"; }
+
+header {
+  background-color: #6495ED;
+  padding: 40px 30px;
+  text-align: right; }
+  header a {
+    color: #FAEBD7; }
+    header a:visited {
+      color: #FAEBD7; }
+    header a:active {
+      color: #DEB887; }
+    header a:hover {
+      text-decoration: underline; }
+  header nav ul {
+    list-style: none; }
+    header nav ul li {
+      margin: 10px 0; }
+
+main {
+  background-color: #FAEBD7;
+  padding: 30px; }
+  main article {
+    background-color: white;
+    padding: 20px;
+    margin-bottom: 30px;
+    -webkit-box-shadow: #c4c4c4 3px 3px 4px;
+    -moz-box-shadow: #c4c4c4 3px 3px 4px;
+    box-shadow: #c4c4c4 3px 3px 4px; }
+    main article .post-date {
+      color: #8d8d8d;
+      font-size: .9rem; }
+    main article .post-content h2 {
+      margin-bottom: 60px;
+      margin-top: 5px; }
+    main article .post-content a {
+      color: black; }
+      main article .post-content a:active {
+        color: #DEB887; }
+      main article .post-content a:hover {
+        color: #6495ED;
+        text-decoration: underline; }
+    main article .post-content figure {
+      text-align: center; }
+      main article .post-content figure img {
+        width: 200px;
+        max-width: 100%; }
+    main article .post-content p {
+      font-size: .8rem; }
+      main article .post-content p a {
+        color: #6495ED; }
+        main article .post-content p a:active {
+          color: #DEB887; }
+        main article .post-content p a:hover {
+          text-decoration: underline; }
+
+@media only screen and (min-width: 768px) {
+  body > div {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-flex-direction: row;
+    -ms-flex-direction: row;
+    flex-direction: row; }
+
+  header {
+    width: 500px; }
+
+  main {
+    background-color: #FAEBD7;
+    padding: 60px; }
+    main article {
+      padding: 50px; }
+      main article .post-content figure {
+        text-align: center; }
+        main article .post-content figure img {
+          max-width: 250px; } }

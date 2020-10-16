@@ -1,0 +1,58 @@
+@import 'partials/reset';
+@import 'partials/prefix-mixins';
+@import 'partials/layout'; // responsive grid and media queries
+
+// color palette - these colors will be the color swatches of the Colors section
+
+$color-1: #5f8ee4; // Cornflower Blue - Action color
+$color-2: #19191a; // Dark Blue
+$color-3: #e4655f; // Red
+$color-4: #e6e6e6; // light grey
+$color-5: #ffffff; // white
+
+// additional colors
+
+$success: #6fce72; // green
+$alert: $color-3; // red
+
+// fonts
+$primary-font: 'Merriweather', serif;
+$secondary-font: 'Open Sans', sans-serif;
+
+/* -------------------------------- 
+
+xBackground 
+
+-------------------------------- */
+
+body {
+  /* this is the page background */
+  background-color: $color-5;
+}
+
+/* -------------------------------- 
+
+xPatterns
+
+-------------------------------- */
+
+.cd-box {
+  /* this is the container of various design elements - i.e. the 2 logo of the branding section */
+  border: 1px solid $color-4;
+  border-radius: 3px;
+  background: $color-5;
+  box-shadow: 0 1px 1px rgba(#000, 0.05);
+  padding: 6px;
+}
+
+@import 'partials/navigation';
+
+@import 'partials/typography';
+
+@import 'partials/buttons';
+
+@import 'partials/icons';
+
+@import 'partials/form';
+
+@import 'partials/basic-style';

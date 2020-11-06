@@ -1,0 +1,23 @@
+html, body{
+    margin:0;
+    padding: 0;
+    font-family: $main_font;
+}
+h1,h2,h3,h4,h5,h6{
+    font-family: $heading_font;
+}
+#css-zen-garden{
+    margin: auto;
+    max-width: 80%;
+    text-align: center;
+}
+#zen-supporting::before{
+    @include line();
+}
+aside.sidebar::before{
+    margin-top: 20px;
+    @include line();
+}
+#zen-requirements p[role="contentinfo"]::before{
+    @include line();
+}

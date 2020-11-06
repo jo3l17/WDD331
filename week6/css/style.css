@@ -1,0 +1,21 @@
+.card_container {
+  display: inline-block;
+  margin: 0 30px; }
+
+.card {
+  width: 300px;
+  height: 420px; }
+
+.inner {
+  width: 270px;
+  height: 390px;
+  stroke: black;
+  rx: 7.5px;
+  ry: 7.5px; }
+
+.back_container {
+  width: 300px;
+  height: 420px;
+  fill: white;
+  rx: 30px;
+  ry: 30px; }

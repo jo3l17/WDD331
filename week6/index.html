@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+  <div class="card_container">
+    <svg class="card">
+      <defs>
+        <marker id="arrowhead" markerWidth="10" markerHeight="7" refX="0" refY="3.5" orient="auto">
+          <polygon points="0 0, 10 3.5, 0 7" />
+        </marker>
+      </defs>
+      <line x1="0" y1="0" x2="250" y2="50" stroke="#000" stroke-width="8" marker-end="url(#arrowhead)" />
+    </svg>
+  </div>
+  <div class="card_container">
+    <svg class="card">
+      <defs>
+        <pattern id="circles" patternUnits="userSpaceOnUse" x="0" y="-10" width="10" height="10">
+          <circle cx="5" cy="5" r="5" style="fill: none; stroke: black; stroke-width: 2px;" />
+        </pattern>
+      </defs>
+      <rect class="back_container" x="0" y="0" />
+      <rect class="inner" x="15" y="15" fill=url(#circles) />
+    </svg>
+  </div>
+</body>
+
+</html>

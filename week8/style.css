@@ -1,0 +1,35 @@
+@import url("https://fonts.googleapis.com/css2?family=Mountains+of+Christmas&family=Nunito&display=swap");
+html, body {
+  margin: 0;
+  padding: 0;
+  font-family: "Nunito", "Arial"; }
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: "Mountains of Christmas", "Sans serif"; }
+
+#css-zen-garden {
+  margin: auto;
+  max-width: 80%;
+  text-align: center; }
+
+#zen-supporting::before {
+  display: inline-block;
+  content: '';
+  height: 20px;
+  width: 100%;
+  background-color: black; }
+
+aside.sidebar::before {
+  margin-top: 20px;
+  display: inline-block;
+  content: '';
+  height: 20px;
+  width: 100%;
+  background-color: black; }
+
+#zen-requirements p[role="contentinfo"]::before {
+  display: inline-block;
+  content: '';
+  height: 20px;
+  width: 100%;
+  background-color: black; }

@@ -1,0 +1,25 @@
+$card_width: 300px;
+$card_height: 1.4*$card-width;
+$radius: 30px;
+.card_container {
+  display: inline-block;
+  margin: 0 30px;
+}
+.card {
+  width: $card-width;
+  height: $card-height;
+}
+.inner {
+  width: $card-width - 30px;
+  height: 1.4*$card-width - 30px;
+  stroke: black;
+  rx: $radius*1/4;
+  ry: $radius*1/4;
+}
+.back_container{
+  width: $card-width;
+  height: $card-height;
+  fill: white;
+  rx: $radius;
+  ry: $radius;
+}

@@ -1,0 +1,41 @@
+#css-zen-garden{
+    h1{
+        font-size: 3em;
+    }
+    max-width: 60%;
+}
+#zen-resources{
+    ul{
+        display: flex;
+        li{
+            margin: 0 10px;
+        }
+    }
+}
+#design-selection{
+    border: 1px solid black;
+    ul{
+        padding: 15px;
+        li{
+            color: transparent;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            a{
+                color:black;
+            }
+        }
+    }
+}
+footer{
+    display: flex;
+    justify-content: space-around;
+}
+#zen-requirements p[role="contentinfo"]{
+    margin: auto;
+    max-width: 80%;
+    margin-bottom: 15px;
+}
+#zen-requirements p[role="contentinfo"]::before{
+    margin-bottom: 15px;
+}

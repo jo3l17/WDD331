@@ -25,6 +25,6 @@ aside.sidebar::before{
     margin-top: 20px;
     @include line();
 }
-#zen-requirements p[role="contentinfo"]::before{
+#zen-requirements p:nth-last-child(2)::after{
     @include line();
 }

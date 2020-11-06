@@ -33,9 +33,44 @@ aside.sidebar::before {
   width: 100%;
   background-color: black; }
 
-#zen-requirements p[role="contentinfo"]::before {
+#zen-requirements p:nth-last-child(2)::after {
   display: inline-block;
   content: '';
   height: 20px;
   width: 100%;
   background-color: black; }
+
+@media only screen and (min-width: 32.5em) {
+  #css-zen-garden {
+    max-width: 60%; }
+    #css-zen-garden h1 {
+      font-size: 3em; }
+
+  #zen-resources ul {
+    display: flex; }
+    #zen-resources ul li {
+      margin: 0 10px; }
+
+  #design-selection {
+    border: 1px solid black; }
+    #design-selection ul {
+      padding: 15px; }
+      #design-selection ul li {
+        color: transparent;
+        display: flex;
+        align-items: center;
+        justify-content: space-between; }
+        #design-selection ul li a {
+          color: black; }
+
+  footer {
+    display: flex;
+    justify-content: space-around; }
+
+  #zen-requirements p[role="contentinfo"] {
+    margin: auto;
+    max-width: 80%;
+    margin-bottom: 15px; }
+
+  #zen-requirements p[role="contentinfo"]::before {
+    margin-bottom: 15px; } }

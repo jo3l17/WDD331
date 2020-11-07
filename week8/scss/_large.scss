@@ -8,14 +8,16 @@
     ul{
         display: flex;
         li{
-            margin: 0 10px;
+            margin: 2em auto;
         }
     }
 }
 #design-selection{
+    max-width: 70%;
+    margin: auto;
     border: 1px solid black;
     ul{
-        padding: 15px;
+        padding: 30px;
         li{
             color: transparent;
             display: flex;

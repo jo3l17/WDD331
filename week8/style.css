@@ -5,7 +5,8 @@ html, body {
   font-family: "Nunito", "Arial"; }
 
 h1, h2, h3, h4, h5, h6 {
-  font-family: "Mountains of Christmas", "Sans serif"; }
+  font-family: "Mountains of Christmas", "Sans serif";
+  text-transform: uppercase; }
 
 ul {
   list-style: none;

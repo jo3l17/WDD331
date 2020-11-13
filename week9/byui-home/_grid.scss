@@ -2,8 +2,15 @@ $num-columns: 12;
 $one-column: 100% / $num-columns;
 $loop-start: 1;
 $loop-end: $num-columns + 1;
-
 .row {
+  display: flex;
+  flex-flow: row wrap;
+  align-items: end;
+  align-content: space-between;
+  height: 100%;
+}
+
+.row-center {
   display: flex;
   flex-flow: row wrap;
   align-items: center;
@@ -28,8 +35,33 @@ $loop-end: $num-columns + 1;
 @for $index from $loop-start to $loop-end {
   .col-#{$index} {
     @include col($index);
+    padding-left: 10px;
+    padding-right: 10px;
   }
   .offset-#{$index} {
     @include offset($index);
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+}
+
+// responsive
+@import "responsive";
+@each $name, $breakpoint in $breakpoints {
+  @for $index from $loop-start to $loop-end {
+    .col-#{$name}-#{$index} {
+      @include respond-to($name) {
+        padding-left: 10px;
+        padding-right: 10px;
+        @include col($index);
+      }
+    }
+    .offset-#{$name}-#{$index} {
+      @include respond-to($name) {
+        padding-left: 10px;
+        padding-right: 10px;
+        @include offset($index);
+      }
+    }
   }
 }

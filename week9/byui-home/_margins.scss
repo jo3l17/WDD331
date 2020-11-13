@@ -1,39 +1,127 @@
 $limit_margin: 5;
-$loop-start: 1;
-$loop-end: $limit_margin +1;
-
-
+$loop-start: 0;
+$loop-end: $limit_margin + 1;
 
 //make column classes
 @for $index from $loop-start to $loop-end {
     .mb-#{$index} {
-        margin-bottom: $index*1em !important;
+        margin-bottom: $index * 1em !important;
     }
     .mt-#{$index} {
-        margin-top: $index*1em !important;
+        margin-top: $index * 1em !important;
     }
     .ml-#{$index} {
-        margin-left: $index*1em !important;
+        margin-left: $index * 1em !important;
     }
     .mr-#{$index} {
-        margin-right: $index*1em !important;
+        margin-right: $index * 1em !important;
     }
     .m-#{$index} {
-        margin: $index*1px;
+        margin: $index * 1em;
     }
 }
-.m-auto{
+.m-auto {
     margin: auto;
 }
-.mb-auto{
+.mb-auto {
     margin-bottom: auto;
 }
-.mt-auto{
+.mt-auto {
     margin-top: auto;
 }
-.mr-auto{
+.mr-auto {
     margin-right: auto;
 }
-.ml-auto{
+.ml-auto {
     margin-left: auto;
+}
+
+@for $index from $loop-start to $loop-end {
+    .pb-#{$index} {
+        padding-bottom: $index * 1em !important;
+    }
+    .pt-#{$index} {
+        padding-top: $index * 1em !important;
+    }
+    .pl-#{$index} {
+        padding-left: $index * 1em !important;
+    }
+    .pr-#{$index} {
+        padding-right: $index * 1em !important;
+    }
+    .p-#{$index} {
+        padding: $index * 1em;
+    }
+}
+.p-auto {
+    padding: auto;
+}
+.pb-auto {
+    padding-bottom: auto;
+}
+.pt-auto {
+    padding-top: auto;
+}
+.pr-auto {
+    padding-right: auto;
+}
+.pl-auto {
+    padding-left: auto;
+}
+
+@import "responsive";
+
+@each $name, $breakpoint in $breakpoints {
+    @for $index from $loop-start to $loop-end {
+        .mb-#{$name}-#{$index} {
+            @include respond-to($name) {
+                margin-bottom: $index * 1em !important;
+            }
+        }
+        .mt-#{$name}-#{$index} {
+            @include respond-to($name) {
+                margin-top: $index * 1em !important;
+            }
+        }
+        .ml-#{$name}-#{$index} {
+            @include respond-to($name) {
+                margin-left: $index * 1em !important;
+            }
+        }
+        .mr-#{$name}-#{$index} {
+            @include respond-to($name) {
+                margin-right: $index * 1em !important;
+            }
+        }
+        .m-#{$name}-#{$index} {
+            @include respond-to($name) {
+                margin: $index * 1px;
+            }
+        }
+        .pb-#{$name}-#{$index} {
+            @include respond-to($name) {
+                padding-bottom: $index * 1em !important;
+            }
+        }
+        .pt-#{$name}-#{$index} {
+            @include respond-to($name) {
+                padding-top: $index * 1em !important;
+            }
+        }
+        .pl-#{$name}-#{$index} {
+            @include respond-to($name) {
+                padding-left: $index * 1em !important;
+            }
+        }
+        .pr-#{$name}-#{$index} {
+            @include respond-to($name) {
+                padding-right: $index * 1em !important;
+            }
+        }
+        .p-#{$name}-#{$index} {
+            @include respond-to($name) {
+                padding: $index * 1em;
+            }
+        }
+    }
 }

@@ -1,0 +1,39 @@
+$limit_margin: 5;
+$loop-start: 1;
+$loop-end: $limit_margin +1;
+
+
+
+//make column classes
+@for $index from $loop-start to $loop-end {
+    .mb-#{$index} {
+        margin-bottom: $index*1em !important;
+    }
+    .mt-#{$index} {
+        margin-top: $index*1em !important;
+    }
+    .ml-#{$index} {
+        margin-left: $index*1em !important;
+    }
+    .mr-#{$index} {
+        margin-right: $index*1em !important;
+    }
+    .m-#{$index} {
+        margin: $index*1px;
+    }
+}
+.m-auto{
+    margin: auto;
+}
+.mb-auto{
+    margin-bottom: auto;
+}
+.mt-auto{
+    margin-top: auto;
+}
+.mr-auto{
+    margin-right: auto;
+}
+.ml-auto{
+    margin-left: auto;
+}

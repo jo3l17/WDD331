@@ -1,0 +1,50 @@
+$breakpoints: (
+    "small": 767px,
+    "medium": 992px,
+    "large": 1200px,
+) !default;
+@mixin flexBox($grow: 1) {
+    flex-basis: 0;
+    -webkit-box-flex: 1;
+    -ms-flex-positive: 1;
+    flex-grow: $grow;
+    max-width: 100%;
+}
+@mixin flexContainer {
+    display: flex;
+    flex-wrap: wrap;
+}
+@mixin reset {
+    border: none;
+    padding: 0;
+    cursor: pointer;
+    outline: inherit;
+}
+@mixin respond-to($breakpoint) {
+    @if map-has-key($breakpoints, $breakpoint) {
+        @media (min-width: map-get($breakpoints, $breakpoint)) {
+            @content;
+        }
+    } @else {
+        @warn "Unfortunately, no value could be retrieved from `#{$breakpoint}`. "
+            + "Available breakpoints are: #{map-keys($breakpoints)}.";
+    }
+}
+@mixin linkExternal {
+    font-size: 0.8em;
+    line-height: 1;
+    padding: 6px 12px;
+    span {
+        font-size: 0.8em;
+        line-height: 1.4;
+    }
+}
+@mixin border($size: 1px, $color: "black", $tipe: solid) {
+    border: $size $tipe $color;
+}
+@mixin linkColor {
+    color: $link-blue;
+    &:active {
+        color: $link-blue;
+    }
+}

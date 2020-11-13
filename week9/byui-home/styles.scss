@@ -1,0 +1,167 @@
+@import "mixins";
+@import "typography";
+@import "icons";
+@import "margins";
+@import "grid";
+$sm-break: 48em;
+// colors
+$dark-gray: #727272;
+$med-gray: #b4b3b5;
+$light-gray: #eaeaea;
+$body-font: #020202;
+$link-blue: #0076b6; //why do we have both of these blues?
+$byui-blue: #056cb6;
+
+// Utility classes
+*,
+*:before,
+*:after {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+img {
+  max-width: 100%;
+}
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  border: 0;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "BYUI Open Sans";
+}
+a {
+  font-family: "BYUI Open Sans";
+  text-decoration: none;
+}
+.w-100 {
+  width: 100% !important;
+}
+header {
+  .site-banner {
+    background-color: $byui-blue;
+    padding: 0.5em 0.5em 0.5em 0em;
+    @include flexContainer;
+    .site-banner__left {
+      a {
+        background-color: $body-font;
+        color: $light-gray;
+        @include reset;
+        padding: 0.5em;
+      }
+      display: inline;
+      @include flexBox;
+    }
+    .site-banner__right {
+      text-align: right;
+      @include flexBox;
+      a {
+        color: white;
+      }
+    }
+  }
+  form {
+    display: none;
+    @include flexBox;
+    div {
+      background-color: $body-font;
+      padding: 0.3em;
+      @include flexContainer;
+      input {
+        @include flexBox(18);
+        border-radius: 3px 0 0 3px;
+        @include reset;
+        padding: 0.1em;
+      }
+      button {
+        color: $light-gray;
+        background-color: #68ad44;
+        @include reset;
+        @include flexBox;
+        border-radius: 0 3px 3px 0;
+        padding: 0.2em;
+        position: relative;
+        span {
+          font-size: 0.8em;
+          margin: 0;
+          position: absolute;
+          top: 50%;
+          -ms-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+        }
+      }
+    }
+  }
+}
+main {
+  .interest_box_container {
+    margin-top: 30px;
+    .interest_box {
+      .box_link {
+        @include linkColor;
+        .box_figure {
+          border: 1px solid $med-gray;
+          .box_caption {
+            margin-top: -5px;
+            @include linkExternal;
+          }
+        }
+      }
+    }
+  }
+  .resources_links {
+    h3 {
+      padding: 6px 12px;
+      border: 1px solid $dark-gray;
+      background-color: $dark-gray;
+      color: white;
+    }
+    .highlights-link {
+      @include linkExternal;
+      @include linkColor;
+      border-bottom: 1px solid $med-gray;
+      border-left: 1px solid $med-gray;
+      border-right: 1px solid $med-gray;
+    }
+  }
+  .dates_container {
+    .dates_heading {
+      background-color: $byui-blue;
+      color: $light-gray;
+      padding: 6px 12px;
+    }
+    .dates_list {
+      a {
+        border-bottom: 1px solid $med-gray;
+        font-size: 80%;
+        padding: 6px 12px;
+        color: $body-font;
+        div:first-child{
+          font-weight: bold;
+        }
+      }
+    }
+  }
+}
+.float-right {
+  float: right !important;
+}
+.d-block {
+  display: block;
+}
+.responsive_container {
+  max-width: 85%;
+}

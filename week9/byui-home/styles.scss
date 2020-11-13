@@ -136,6 +136,9 @@ main {
       border-bottom: 1px solid $med-gray;
       border-left: 1px solid $med-gray;
       border-right: 1px solid $med-gray;
+      @include respond-to("medium") {
+        font-size: 1em;
+      }
     }
   }
   .dates_container {
@@ -147,50 +150,53 @@ main {
     .dates_list {
       a {
         border-bottom: 1px solid $med-gray;
-        font-size: 80%;
+        font-size: .8em;
+        @include respond-to("medium") {
+          font-size: .9em;
+        }
         padding: 6px 12px;
         color: $body-font;
-        div:first-child{
+        div:first-child {
           font-weight: bold;
         }
       }
     }
   }
-  .newsroom_container{
-    .row{
-      div:first-child{
-        font-family: 'BYUI Open Sans';
+  .newsroom_container {
+    .row {
+      div:first-child {
+        font-family: "BYUI Open Sans";
         font-weight: bold;
         font-size: 70%;
       }
       border-top: 1px solid $dark-gray;
       padding-top: 25px;
       padding-bottom: 25px;
-      h4{
+      h4 {
         @include linkColor;
       }
     }
-    .col-medium-3{
-      @include respond-to('medium'){
+    .col-medium-3 {
+      @include respond-to("medium") {
         display: block;
       }
     }
   }
-  .message_today{
+  .message_today {
     border: 1px solid $dark-gray;
     border-radius: 10px;
     overflow: hidden;
-    .message_container{
-      .message_title{
+    .message_container {
+      .message_title {
         @include linkColor;
         margin-bottom: 5px;
       }
-      .message_description{
-        font-size: .85em;
-        font-family: 'BYUI Open Sans';
+      .message_description {
+        font-size: 0.85em;
+        font-family: "BYUI Open Sans";
         margin-bottom: 15px;
       }
-      .button{
+      .button {
         @include reset;
         padding: 8px 16px;
         border-radius: 6px;
@@ -209,14 +215,14 @@ main {
 }
 .responsive_container {
   max-width: 85%;
-  @include respond-to('small'){
+  @include respond-to("small") {
     max-width: 50%;
   }
-  @include respond-to('medium'){
+  @include respond-to("medium") {
     max-width: 100%;
   }
 }
-.d-none{
+.d-none {
   display: none;
 }
 .img-responsive {

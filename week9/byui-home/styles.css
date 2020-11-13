@@ -2407,15 +2407,21 @@ main .resources_links .resource_link {
     line-height: 1.4; }
   main .resources_links .resource_link:active {
     color: #0076b6; }
+  @media (min-width: 992px) {
+    main .resources_links .resource_link {
+      font-size: 1em; } }
 main .dates_container .dates_heading {
   background-color: #056cb6;
   color: #eaeaea;
   padding: 6px 12px; }
 main .dates_container .dates_list a {
   border-bottom: 1px solid #b4b3b5;
-  font-size: 80%;
+  font-size: .8em;
   padding: 6px 12px;
   color: #020202; }
+  @media (min-width: 992px) {
+    main .dates_container .dates_list a {
+      font-size: .9em; } }
   main .dates_container .dates_list a div:first-child {
     font-weight: bold; }
 main .newsroom_container .row {
@@ -2423,7 +2429,7 @@ main .newsroom_container .row {
   padding-top: 25px;
   padding-bottom: 25px; }
   main .newsroom_container .row div:first-child {
-    font-family: 'BYUI Open Sans';
+    font-family: "BYUI Open Sans";
     font-weight: bold;
     font-size: 70%; }
   main .newsroom_container .row h4 {
@@ -2443,8 +2449,8 @@ main .message_today {
     main .message_today .message_container .message_title:active {
       color: #0076b6; }
   main .message_today .message_container .message_description {
-    font-size: .85em;
-    font-family: 'BYUI Open Sans';
+    font-size: 0.85em;
+    font-family: "BYUI Open Sans";
     margin-bottom: 15px; }
   main .message_today .message_container .button {
     border: none;

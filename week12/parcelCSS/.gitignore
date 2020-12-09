@@ -1,0 +1,4 @@
+node_modules/
+build/
+.cache/
+week5/style-guide-template-parcel.zip

@@ -1,0 +1,145 @@
+html,
+body {
+    margin: 0;
+    padding: 0;
+    font-family: $main_font;
+    background-color: $background;
+    width: 100%;
+}
+body {
+    display: flex;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: $heading_font;
+    text-transform: uppercase;
+    color: $primary;
+}
+a{
+    color: $secondary;
+    text-decoration: none;
+    font-weight: bold;
+}
+@-webkit-keyframes rotate-scale-up {
+    0% {
+        -webkit-transform: scale(1) rotateZ(0);
+        transform: scale(1) rotateZ(0);
+    }
+    50% {
+        -webkit-transform: scale(1.2) rotateZ(180deg);
+        transform: scale(1.2) rotateZ(180deg);
+    }
+    100% {
+        -webkit-transform: scale(1) rotateZ(360deg);
+        transform: scale(1) rotateZ(360deg);
+    }
+}
+@keyframes rotate-scale-up {
+    0% {
+        -webkit-transform: scale(1) rotateZ(0);
+        transform: scale(1) rotateZ(0);
+    }
+    50% {
+        -webkit-transform: scale(1.2) rotateZ(180deg);
+        transform: scale(1.2) rotateZ(180deg);
+    }
+    100% {
+        -webkit-transform: scale(1) rotateZ(360deg);
+        transform: scale(1) rotateZ(360deg);
+    }
+}
+
+#zen-intro {
+    h1 {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-bottom: 0;
+        &::before {
+            display: inline-block;
+            content: "";
+            background: url(assets/star-1.svg);
+            height: 80px;
+            width: 80px;
+            margin-right: 0;
+            background-size: cover;
+            animation: rotate-scale-up 5s infinite;
+        }
+        &::after {
+            display: inline-block;
+            content: "";
+            background: url(assets/star-2.svg);
+            height: 100px;
+            width: 100px;
+            margin-left: 0;
+            background-size: cover;
+            animation: rotate-scale-up 5s infinite;
+        }
+    }
+}
+
+#zen-resources {
+    &::after {
+        display: block;
+        content: "";
+        background: url(assets/botas.svg);
+        height: 100px;
+        width: 300px;
+        background-size: cover;
+        margin: auto;
+    }
+}
+
+h2,
+h3 {
+    color: $accent;
+}
+ul {
+    list-style: none;
+    padding-left: 0;
+}
+#css-zen-garden {
+    h1 {
+        font-size: 2.5em;
+    }
+    margin: auto;
+    text-align: center;
+    .page-wrapper {
+        max-width: 95%;
+        margin: auto;
+    }
+}
+#zen-supporting::before {
+    @include line();
+}
+aside.sidebar::before {
+    margin-top: 20px;
+    @include line();
+}
+#zen-requirements p:nth-last-child(2)::after {
+    // @include line();
+}
+.viewall {
+    font-size: 2em;
+    border: 1px black solid;
+    max-width: 10em;
+    margin-left: auto;
+    margin-right: auto;
+}
+.viewall{
+    border: 1px $accent dashed;
+    border-radius: 5px;
+    padding: 15px 8px;
+}
+.next{
+    margin-bottom: 10px;
+}
+#design-selection{
+    border: $accent dotted 2px;
+    border-radius: 5px;
+}

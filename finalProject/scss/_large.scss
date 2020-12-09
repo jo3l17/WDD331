@@ -1,0 +1,78 @@
+body::before {
+    display: block;
+    position: fixed;
+    left: 0;
+    content: "";
+    width: 20%;
+    height: 100vh;
+    background-size: 200px;
+    background-repeat: repeat;
+    background: url(assets/pattern-2.svg);
+}
+body::after {
+    display: block;
+    position: fixed;
+    right: 0;
+    content: "";
+    width: 20%;
+    height: 100vh;
+    background-size: 200px;
+    background-repeat: repeat;
+    background: url(assets/pattern-2.svg);
+}
+
+#zen-intro {
+    h1 {
+        &::before {
+            margin-right: 25px;
+        }
+        &::after {
+            height: 120px;
+            width: 100px;
+            margin-left: 25px;
+        }
+    }
+}
+
+#css-zen-garden{
+    h1{
+        font-size: 3em;
+    }
+    max-width: 60%;
+}
+#zen-resources{
+    ul{
+        display: flex;
+        li{
+            margin: 2em auto;
+        }
+    }
+}
+#design-selection{
+    max-width: 70%;
+    margin: auto;
+    ul{
+        padding: 30px;
+        li{
+            color: transparent;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            a{
+                color:black;
+            }
+        }
+    }
+}
+footer{
+    display: flex;
+    justify-content: space-around;
+}
+#zen-requirements p[role="contentinfo"]{
+    margin: auto;
+    max-width: 80%;
+    margin-bottom: 15px;
+}
+#zen-requirements p[role="contentinfo"]::before{
+    margin-bottom: 15px;
+}

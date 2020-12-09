@@ -1,0 +1,7 @@
+@mixin line(){
+    display: inline-block;
+    content: '';
+    height: 20px;
+    width: 100%;
+    background-color: $primary;
+}

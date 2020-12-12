@@ -7,7 +7,7 @@ body {
     width: 100%;
 }
 body {
-    display: flex;
+    @include flexbox();
 }
 
 h1,
@@ -20,77 +20,34 @@ h6 {
     text-transform: uppercase;
     color: $primary;
 }
-a{
+a {
     color: $secondary;
     text-decoration: none;
     font-weight: bold;
 }
-@-webkit-keyframes rotate-scale-up {
-    0% {
-        -webkit-transform: scale(1) rotateZ(0);
-        transform: scale(1) rotateZ(0);
-    }
-    50% {
-        -webkit-transform: scale(1.2) rotateZ(180deg);
-        transform: scale(1.2) rotateZ(180deg);
-    }
-    100% {
-        -webkit-transform: scale(1) rotateZ(360deg);
-        transform: scale(1) rotateZ(360deg);
-    }
-}
-@keyframes rotate-scale-up {
-    0% {
-        -webkit-transform: scale(1) rotateZ(0);
-        transform: scale(1) rotateZ(0);
-    }
-    50% {
-        -webkit-transform: scale(1.2) rotateZ(180deg);
-        transform: scale(1.2) rotateZ(180deg);
-    }
-    100% {
-        -webkit-transform: scale(1) rotateZ(360deg);
-        transform: scale(1) rotateZ(360deg);
-    }
-}
 
 #zen-intro {
     h1 {
-        display: flex;
-        justify-content: center;
-        align-items: center;
+        @include flexbox();
+        @include justify-content(center);
+        @include align-items(center);
         margin-bottom: 0;
         &::before {
-            display: inline-block;
-            content: "";
-            background: url(assets/star-1.svg);
-            height: 80px;
-            width: 80px;
+            @include pseudo-content(inline-block,80px,80px,url(assets/star-1.svg));
             margin-right: 0;
-            background-size: cover;
-            animation: rotate-scale-up 5s infinite;
+            @include animateRotate();
         }
         &::after {
-            display: inline-block;
-            content: "";
-            background: url(assets/star-2.svg);
-            height: 100px;
-            width: 100px;
+            @include pseudo-content(inline-block,100px,100px,url(assets/star-2.svg));
             margin-left: 0;
-            background-size: cover;
-            animation: rotate-scale-up 5s infinite;
+            @include animateRotate();
         }
     }
 }
 
 #zen-resources {
     &::after {
-        display: block;
-        content: "";
-        background: url(assets/botas.svg);
-        height: 100px;
-        width: 300px;
-        background-size: cover;
+        @include pseudo-content(block,100px,300px,url(assets/botas.svg));
         margin: auto;
     }
 }
@@ -121,9 +78,6 @@ aside.sidebar::before {
     margin-top: 20px;
     @include line();
 }
-#zen-requirements p:nth-last-child(2)::after {
-    // @include line();
-}
 .viewall {
     font-size: 2em;
     border: 1px black solid;
@@ -131,15 +85,15 @@ aside.sidebar::before {
     margin-left: auto;
     margin-right: auto;
 }
-.viewall{
+.viewall {
     border: 1px $accent dashed;
     border-radius: 5px;
     padding: 15px 8px;
 }
-.next{
+.next {
     margin-bottom: 10px;
 }
-#design-selection{
+#design-selection {
     border: $accent dotted 2px;
     border-radius: 5px;
 }

@@ -1,24 +1,17 @@
-body::before {
-    display: block;
-    position: fixed;
-    left: 0;
-    content: "";
-    width: 20%;
-    height: 100vh;
-    background-size: 200px;
-    background-repeat: repeat;
-    background: url(assets/pattern-2.svg);
-}
-body::after {
-    display: block;
-    position: fixed;
-    right: 0;
-    content: "";
-    width: 20%;
-    height: 100vh;
-    background-size: 200px;
-    background-repeat: repeat;
-    background: url(assets/pattern-2.svg);
+body {
+    @include position(relative);
+    &::before,
+    &::after {
+        @include pseudo-content(block, 100%, 33.3%, url(assets/pattern-2.svg));
+        background-size: 200px;
+        background-repeat: repeat;
+    }
+    &::before {
+        @include position(absolute, $left: -33.3%);
+    }
+    &::after {
+        @include position(absolute, $right: -33.3%);
+    }
 }
 
 #zen-intro {
@@ -34,45 +27,45 @@ body::after {
     }
 }
 
-#css-zen-garden{
-    h1{
+#css-zen-garden {
+    h1 {
         font-size: 3em;
     }
     max-width: 60%;
 }
-#zen-resources{
-    ul{
-        display: flex;
-        li{
+#zen-resources {
+    ul {
+        @include flexbox();
+        li {
             margin: 2em auto;
         }
     }
 }
-#design-selection{
+#design-selection {
     max-width: 70%;
     margin: auto;
-    ul{
+    ul {
         padding: 30px;
-        li{
+        li {
             color: transparent;
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-            a{
-                color:black;
+            @include flexbox();
+            @include align-items(center);
+            @include justify-content(space-between);
+            a {
+                color: black;
             }
         }
     }
 }
-footer{
-    display: flex;
-    justify-content: space-around;
+footer {
+    @include flexbox();
+    @include justify-content(space-around);
 }
-#zen-requirements p[role="contentinfo"]{
+#zen-requirements p[role="contentinfo"] {
     margin: auto;
     max-width: 80%;
     margin-bottom: 15px;
 }
-#zen-requirements p[role="contentinfo"]::before{
+#zen-requirements p[role="contentinfo"]::before {
     margin-bottom: 15px;
 }

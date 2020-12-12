@@ -1,7 +1,57 @@
-@mixin line(){
+@mixin line() {
     display: inline-block;
-    content: '';
+    content: "";
     height: 20px;
     width: 100%;
     background-color: $primary;
+}
+@mixin animateRotate() {
+    -webkit-animation: rotate-scale-up 5s linear both;
+    animation: rotate-scale-up 5s infinite;
+}
+@mixin flexbox() {
+    display: -webkit-box;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+}
+@mixin justify-content($justify) {
+    -webkit-justify-content: $justify;
+    -moz-justify-content: $justify;
+    -ms-justify-content: $justify;
+    justify-content: $justify;
+    -ms-flex-pack: $justify;
+}
+@mixin align-items($value: stretch) {
+    @if $value == flex-start {
+        -webkit-box-align: start;
+        -moz-box-align: start;
+        -ms-flex-align: start;
+    } @else if $value == flex-end {
+        -webkit-box-align: end;
+        -moz-box-align: end;
+        -ms-flex-align: end;
+    } @else {
+        -webkit-box-align: $value;
+        -moz-box-align: $value;
+        -ms-flex-align: $value;
+    }
+    -webkit-align-items: $value;
+    align-items: $value;
+}
+@mixin pseudo-content($display, $height, $width, $background) {
+    display: $display;
+    content: "";
+    background: $background;
+    height: $height;
+    width: $width;
+    background-size: cover;
+}
+@mixin position($position, $top: null, $right: null, $bottom: null, $left: null) {
+    position: $position;
+    top: $top;
+    right: $right;
+    bottom: $bottom;
+    left: $left;
 }

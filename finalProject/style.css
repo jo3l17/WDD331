@@ -1,30 +1,4 @@
 @import url("https://fonts.googleapis.com/css2?family=Mountains+of+Christmas&family=Nunito&display=swap");
-html,
-body {
-  margin: 0;
-  padding: 0;
-  font-family: "Nunito", "Arial";
-  background-color: #fffdf8;
-  width: 100%; }
-
-body {
-  display: flex; }
-
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-  font-family: "Mountains of Christmas", "Sans serif";
-  text-transform: uppercase;
-  color: #d31816; }
-
-a {
-  color: #088736;
-  text-decoration: none;
-  font-weight: bold; }
-
 @-webkit-keyframes rotate-scale-up {
   0% {
     -webkit-transform: scale(1) rotateZ(0);
@@ -45,9 +19,51 @@ a {
   100% {
     -webkit-transform: scale(1) rotateZ(360deg);
     transform: scale(1) rotateZ(360deg); } }
+html,
+body {
+  margin: 0;
+  padding: 0;
+  font-family: "Nunito", "Arial";
+  background-color: #fffdf8;
+  width: 100%; }
+
+body {
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex; }
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "Mountains of Christmas", "Sans serif";
+  text-transform: uppercase;
+  color: #d31816; }
+
+a {
+  color: #088736;
+  text-decoration: none;
+  font-weight: bold; }
+
 #zen-intro h1 {
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
   display: flex;
+  -webkit-justify-content: center;
+  -moz-justify-content: center;
+  -ms-justify-content: center;
   justify-content: center;
+  -ms-flex-pack: center;
+  -webkit-box-align: center;
+  -moz-box-align: center;
+  -ms-flex-align: center;
+  -webkit-align-items: center;
   align-items: center;
   margin-bottom: 0; }
   #zen-intro h1::before {
@@ -56,8 +72,9 @@ a {
     background: url(assets/star-1.svg);
     height: 80px;
     width: 80px;
-    margin-right: 0;
     background-size: cover;
+    margin-right: 0;
+    -webkit-animation: rotate-scale-up 5s linear both;
     animation: rotate-scale-up 5s infinite; }
   #zen-intro h1::after {
     display: inline-block;
@@ -65,8 +82,9 @@ a {
     background: url(assets/star-2.svg);
     height: 100px;
     width: 100px;
-    margin-left: 0;
     background-size: cover;
+    margin-left: 0;
+    -webkit-animation: rotate-scale-up 5s linear both;
     animation: rotate-scale-up 5s infinite; }
 
 #zen-resources::after {
@@ -97,7 +115,7 @@ ul {
 
 #zen-supporting::before {
   display: inline-block;
-  content: '';
+  content: "";
   height: 20px;
   width: 100%;
   background-color: #d31816; }
@@ -105,7 +123,7 @@ ul {
 aside.sidebar::before {
   margin-top: 20px;
   display: inline-block;
-  content: '';
+  content: "";
   height: 20px;
   width: 100%;
   background-color: #d31816; }
@@ -130,27 +148,23 @@ aside.sidebar::before {
   border-radius: 5px; }
 
 @media only screen and (min-width: 32.5em) {
-  body::before {
-    display: block;
-    position: fixed;
-    left: 0;
-    content: "";
-    width: 20%;
-    height: 100vh;
-    background-size: 200px;
-    background-repeat: repeat;
-    background: url(assets/pattern-2.svg); }
-
-  body::after {
-    display: block;
-    position: fixed;
-    right: 0;
-    content: "";
-    width: 20%;
-    height: 100vh;
-    background-size: 200px;
-    background-repeat: repeat;
-    background: url(assets/pattern-2.svg); }
+  body {
+    position: relative; }
+    body::before, body::after {
+      display: block;
+      content: "";
+      background: url(assets/pattern-2.svg);
+      height: 100%;
+      width: 33.3%;
+      background-size: cover;
+      background-size: 200px;
+      background-repeat: repeat; }
+    body::before {
+      position: absolute;
+      left: -33.3%; }
+    body::after {
+      position: absolute;
+      right: -33.3%; }
 
   #zen-intro h1::before {
     margin-right: 25px; }
@@ -165,6 +179,10 @@ aside.sidebar::before {
       font-size: 3em; }
 
   #zen-resources ul {
+    display: -webkit-box;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
     display: flex; }
     #zen-resources ul li {
       margin: 2em auto; }
@@ -176,15 +194,35 @@ aside.sidebar::before {
       padding: 30px; }
       #design-selection ul li {
         color: transparent;
+        display: -webkit-box;
+        display: -moz-box;
+        display: -ms-flexbox;
+        display: -webkit-flex;
         display: flex;
+        -webkit-box-align: center;
+        -moz-box-align: center;
+        -ms-flex-align: center;
+        -webkit-align-items: center;
         align-items: center;
-        justify-content: space-between; }
+        -webkit-justify-content: space-between;
+        -moz-justify-content: space-between;
+        -ms-justify-content: space-between;
+        justify-content: space-between;
+        -ms-flex-pack: space-between; }
         #design-selection ul li a {
           color: black; }
 
   footer {
+    display: -webkit-box;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
     display: flex;
-    justify-content: space-around; }
+    -webkit-justify-content: space-around;
+    -moz-justify-content: space-around;
+    -ms-justify-content: space-around;
+    justify-content: space-around;
+    -ms-flex-pack: space-around; }
 
   #zen-requirements p[role="contentinfo"] {
     margin: auto;
